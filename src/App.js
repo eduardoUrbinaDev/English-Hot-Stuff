@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import QuestionApp from './components/QuestionApp';
+import VerbsApp from './components/VerbsApp';
+import Navbar from './components/Navbar';
+import StudentName from './components/StudentName';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <h1 className="title">Speaking Exam Basic 3 and Basic 4</h1>
+        <Navbar />
+        <Switch>
+          <Route path="/questions">
+            <QuestionApp />
+          </Route>
+          <Route path="/verbs">
+            <VerbsApp />
+          </Route>
+        </Switch>
+      </div>
+      <StudentName />
+    </Router>
   );
-}
+};
 
 export default App;

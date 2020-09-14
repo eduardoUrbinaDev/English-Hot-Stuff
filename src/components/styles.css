@@ -1,0 +1,67 @@
+
+
+.cardAlignment {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50vw;
+  height: 50vh;
+  background: white;
+  box-shadow: rgba(255, 255, 255, 0.4) -20px 20px 0px;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.button {
+  background: #E4572E;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  width: 30%;
+  height: 35px;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 15px;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+}
+
+h3.score {
+  color: white;
+}
+
+.navbar {
+  background-color: #6ea4bf;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.gradeBar {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+
+.student {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-evenly;
+}
+
+input {
+  width: 60%;
+}
