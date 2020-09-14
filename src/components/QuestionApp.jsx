@@ -7,7 +7,7 @@ let alreadyAskedQuestions = [];
 
 const QuestionApp = () => {
   const [question, setQuestion] = useState(0);
-
+  
   const shuffleQuestion = () => {
     const number = Math.floor(Math.random() * questions.length);
     try {

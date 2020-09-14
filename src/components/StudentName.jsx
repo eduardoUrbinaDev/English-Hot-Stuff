@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { GlobalContext } from '../context/GlobalState';
 import './styles.css';
 
 const StudentName = () => {
   const [value, setValue] = useState('');
-  const [score, setScore] = useState(0);
+  const { addStudent, students, singleScore } = useContext(GlobalContext)
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -12,13 +13,14 @@ const StudentName = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    addStudent({ id: 1, name: value, score: singleScore });
+    console.log(students)
   };
   
   return (
     <form className="student" onSubmit={handleSubmit}>
       <input type="text" value={value} onChange={handleChange} />
-      <h3 className="score">{score}</h3>
+      <h3 className="score">{singleScore}</h3>
       <button>Save</button>
     </form>
   )

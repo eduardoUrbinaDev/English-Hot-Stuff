@@ -14,6 +14,9 @@ const Navbar = () => {
         <li>
           <Link to="/verbs" >VERBS</Link>
         </li>
+        <li>
+          <Link to="/students" >STUDENTS</Link>
+        </li>
       </ul>
     </nav>
   );

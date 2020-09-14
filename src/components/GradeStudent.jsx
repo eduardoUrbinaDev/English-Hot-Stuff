@@ -3,7 +3,7 @@ import Icon from './Icon';
 import './styles.css';
 
 const GradeStudent = () => {
-
+ 
   return (
     <div className="gradeBar">
       <Icon />
